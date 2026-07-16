@@ -37,8 +37,7 @@ async def generate_openai_answer(model_input: str) -> str:
         model=settings.openai_model,
         instructions=SYSTEM_INSTRUCTIONS,
         input=model_input,
-        max_output_tokens=450,
-        temperature=0.2,
+        max_output_tokens=1200,
         store=False,
     )
 
