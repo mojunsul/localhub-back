@@ -27,6 +27,6 @@ app.include_router(posts.router)
 app.include_router(chat_router)
 
 
-@app.get("/")
-def read_root():
-    return {"status": "running", "service": "LocalHub API Server"}
+@app.route("/", methods=["GET", "HEAD"])
+async def read_root():
+    return {"message": "LocalHub API Server is running!"}
